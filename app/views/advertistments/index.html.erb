@@ -1,0 +1,8 @@
+<h1>Advertistments</h1>
+<% @advertistments.each do |advertistment| %>
+<div class="jumbotron mt-3">
+    <h3><%= advertistment.title %></h3>
+    <p><%= advertistment.body %></p>
+    <%= link_to  "Read More", advertistment_path(advertistment), :class =>'btn btn-default' %>
+    </div>
+<% end %>

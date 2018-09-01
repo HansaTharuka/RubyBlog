@@ -1,0 +1,9 @@
+<h1><%= @advertistment.title %></h1>
+<p><%= @advertistment.body %></p>
+<hr>
+<%= link_to "Edit", edit_advertistment_path(@advertistment), :class =>'btn btn-default' %>
+<%= link_to "Delete", advertistment_path(@advertistment),
+    method: :delete,
+    data: {confirm: 'Are you shure?'},
+    :class =>'btn btn-danger' %>
+<hr>

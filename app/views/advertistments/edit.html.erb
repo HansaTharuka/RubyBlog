@@ -1,0 +1,23 @@
+<h1>Edit Advertistments</h1>
+<%= form_for :advertistment, url: advertistment_path(@advertistment), method: :patch do |f| %>
+    <% if @advertistment.errors.any? %>
+        <% @advertistment.errors.full_messages.each do |msg| %>
+        <div class="alart alart-danger"><%= msg %></div>
+        <% end %>
+    <% end %>
+    <p>
+        <%= f.label :title %><br>
+        <%= f.text_field(:title, {:class => 'form-control'})  %>
+    </p>
+
+    <p>
+        <%= f.label :body %><br/>
+        <%= f.text_area(:body,{:class => 'form-control'}) %>
+    </p>
+
+    <p>
+        <%= f.submit(:class => 'btn btn-primary') %>
+    </p>
+
+    <% end %>
+
